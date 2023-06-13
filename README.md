@@ -278,9 +278,9 @@ Now that we have the sessions for the landing pages, let's find out their bounce
 
 We breakdown the steps to get a clear picture of what we're trying to find.
 - **Result:** landing page | sessions (count) | bounced sessions (count) | bounced rate
--- **Step 1:** Find the first `website_pageview_id` or landing page for associated session
--- **Step 2:** Count page views for each session to identify bounces
--- **Step 3:** Summarize total sessions and bounced sessions and calculate bounce rate
+- **Step 1:** Find the first `website_pageview_id` or landing page for associated session
+- **Step 2:** Count page views for each session to identify bounces
+- **Step 3:** Summarize total sessions and bounced sessions and calculate bounce rate
 
 ```sql
 -- Step 1: Find first website_pageview_id/landing page for associated session and filter to date < 2012-06-14 and '\home'
@@ -339,10 +339,10 @@ GROUP BY lp.landing_page;
 ST is running a A/B test on `\lander-1` and `\home` for `gsearch nonbrand` campaign and would like to find out the bounce rates for both pages.
 - **Criteria:** Limit time period to when `\lander-1` started receiving traffic and limit results to < 2012-07-28 to ensure fair comparison.
 - **Result:** landing_page | total sessions | bounced sessions | bounce rate
--- **Step 1:** Find when `/lander-1` was created and first displayed to user on the website. Use either date or pageview id to limit the results.
--- **Step 2:** Find first landing page and filter to test time period (after '2012-06-19') and as prescribed by ST (before '2012-07-28') for gsearch and nonbrand campaign.
--- **Step 3:** Count page views for each session to identify bounces
--- **Step 4:** Summarize total sessions and bounced sessions and calculate bounce rate
+- **Step 1:** Find when `/lander-1` was created and first displayed to user on the website. Use either date or pageview id to limit the results.
+- **Step 2:** Find first landing page and filter to test time period (after '2012-06-19') and as prescribed by ST (before '2012-07-28') for gsearch and nonbrand campaign.
+- **Step 3:** Count page views for each session to identify bounces
+- **Step 4:** Summarize total sessions and bounced sessions and calculate bounce rate
 
 ```sql
 -- Step 1: Find when `/lander-1` was created and first displayed to user on the website
